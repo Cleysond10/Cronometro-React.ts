@@ -1,11 +1,7 @@
-import { ITarefa } from '../../../types/tarefa';
+import { IItem } from '../../../types/types';
 import style from './Item.module.scss';
 
-interface IProps extends ITarefa {
-  selecionaTarefa: (tarefaSelecionada: ITarefa) => void
-}
-
-export default function Item(
+const Item = (
   {
     tarefa,
     tempo,
@@ -13,7 +9,7 @@ export default function Item(
     completado,
     id,
     selecionaTarefa
-  }: IProps) {
+  }: IItem) => {
   return (
     <li
       className={`${style.item}
@@ -41,3 +37,5 @@ export default function Item(
     </li>
   )
 }
+
+export default Item;

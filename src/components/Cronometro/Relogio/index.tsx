@@ -1,10 +1,7 @@
+import { IRelogio } from '../../../types/types';
 import style from './Relogio.module.scss';
 
-interface IProps {
-  tempo: number | undefined
-}
-
-export default function Relogio({ tempo = 0 }: IProps) {
+const Relogio = ({ tempo = 0 }: IRelogio) => {
 
   const minutos = Math.floor(tempo / 60);
   const segundos = tempo % 60;
@@ -21,3 +18,5 @@ export default function Relogio({ tempo = 0 }: IProps) {
     </>
   )
 }
+
+export default Relogio;

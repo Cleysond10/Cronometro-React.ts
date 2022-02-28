@@ -1,14 +1,9 @@
 import React from 'react';
-import { ITarefa } from '../../types/tarefa';
+import { ILista } from '../../types/types';
 import Item from './Item';
 import style from './Lista.module.scss';
-
-interface IProps {
-  tarefas: ITarefa[],
-  selecionaTarefa: (tarefaSelecionada: ITarefa) => void
-}
  
-export default function Lista({ tarefas, selecionaTarefa }: IProps) {
+const Lista = ({ tarefas, selecionaTarefa }: ILista) => {
 
   return (
     <aside className={style.listaTarefas}>
@@ -25,3 +20,5 @@ export default function Lista({ tarefas, selecionaTarefa }: IProps) {
     </aside>
   )
 }
+
+export default Lista;

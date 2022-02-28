@@ -1,16 +1,11 @@
 import Botao from "../Botao";
 import Relogio from "./Relogio";
 import style from './Cronometro.module.scss';
-import { ITarefa } from "../../types/tarefa";
+import { ICronometro } from "../../types/types";
 import { useEffect, useState } from "react";
-import { tempoParaSegundos } from "../../common/utils/time";
+import tempoParaSegundos from "../../common/utils/time";
 
-interface IProps {
-  selecionado: ITarefa | undefined,
-  finalizarTarefa: () => void
-}
-
-export default function Cronometro({ selecionado, finalizarTarefa }: IProps) {
+const Cronometro = ({ selecionado, finalizarTarefa }: ICronometro) => {
   const [tempo, setTempo] = useState<number>();
 
   useEffect(()=>{
@@ -41,3 +36,5 @@ export default function Cronometro({ selecionado, finalizarTarefa }: IProps) {
     </div>
   )
 }
+
+export default Cronometro;

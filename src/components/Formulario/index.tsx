@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ITarefa } from '../../types/tarefa';
+import { ITarefa } from '../../types/types';
 import Botao from '../Botao';
 import style from './Formulario.module.scss';
 import { v4 as uuidv4 } from 'uuid';
